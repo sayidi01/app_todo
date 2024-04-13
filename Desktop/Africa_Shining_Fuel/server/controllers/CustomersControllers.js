@@ -27,7 +27,7 @@ const CustomerAuthentication = (req, res) => {
 
 // Customer Validation
 
-const CustomerAuthenticationValidation = (req, res) => {
+const CustomerAuthenticationValidation = (req, res, next) => {
   const data = { ...req.data?._doc, password: null };
 
   console.log("Req customer", req.data);
